@@ -11,7 +11,7 @@ mic.interimResults = true
 mic.lang = 'th-TH'
 
 function App() {
-  const [isListening, setIsListening] = useState(false)
+  const [isListening, setIsListening] = useState(true)
   const [note, setNote] = useState('')
   useEffect(() => {
     handleListen()
@@ -76,12 +76,17 @@ function App() {
 
   trans(note)
   return (
-    <div>
-      <h1>{TransText}</h1>
+    <div  style={{backgroundColor:"#2DED24",textAlign:"center",height:"100%"}}>
+      <h1 style={{color:"#2DED24"}}>.</h1>
+      <div style={{paddingTop: '2em',marginTop:"20%"}}>
+      <p style={{color:"white",fontSize:50}}>{TransText}</p>
+      </div>
       <button style={{marginTop:"30%"}} onClick={() => setIsListening(!isListening)}>
             Start/Stop
           </button>
       <h5 >{isListening?"Start":"stop"} </h5>
+      <h5 style={{color:"#2DED24"}} >.</h5>
+      
     </div>
   )
 }
