@@ -35,10 +35,7 @@ function App() {
     }
 
     mic.onresult = (event) => {
-      // const transcript = Array.from(event.results)
-      //   .map((result) => result[0])
-      //   .map((result) => result.transcript)
-      //   .join('')
+   
       let fin_cheak = false
       for (let i = event.resultIndex; i < event.results.length; ++i) {
         // If the result item is Final, add it to Final Transcript, Else add it to Interim transcript
